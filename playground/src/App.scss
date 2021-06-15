@@ -1,0 +1,7 @@
+@import '~tailwindcss/base.css';
+@import '~tailwindcss/utilities.css';
+
+* {
+	@apply text-red-400;
+}
+@import '~@cross-ui/core/dist/cross-ui/cross-ui.css';
