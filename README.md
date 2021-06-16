@@ -4,16 +4,29 @@
 
 [![NPM](https://img.shields.io/npm/v/@cross-ui/react.svg)](https://www.npmjs.com/package/@cross-ui/react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+**RECOMMENDATION:** To use this library comfortably, is needed to install TailwindCSS and PostCSS, so, follow the next instructions.
+
+**NOTE:** This is an ALPHA version, maybe the next improvements will have TailwindCSS as an option.
+
 ## Install
 
-npm users: `npm install --save @cross-ui/react`
+npm users: `npm install --save @cross-ui/react && npm install tailwindcss@latest postcss@latest autoprefixer@latest -D`
 
-yarn users: `yarn add @cross-ui/react`
+yarn users: `yarn add @cross-ui/react && yarn add tailwindcss@latest postcss@latest autoprefixer@latest -D`
 
 ## Usage
 
+```scss
+@import '~tailwindcss/dist/base.css';
+@import '~tailwindcss/dist/utilities.css';
+
+@import '~@cross-ui/core/dist/cross-ui/cross-ui.css';
+
+//...
+```
+
 ```jsx
-import './index.css'
+import './index.scss'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -57,7 +70,7 @@ You have a [Dockerfile](Dockerfile) ready to server the example in a simple envi
 ## Author
 ```js
 {
-  license: "MIT",
+	license: "MIT",
 	name: "Dimas López",
 	role: "FullStack Software development",
 	alias: "dimaslz",

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
-    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+    "build": "NODE_ENV=production node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
@@ -13,14 +13,14 @@
     "@cross-ui/react": "link:..",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "sass": "link:../node_modules/sass",
-    "postcss": "link:../node_modules/postcss",
-    "tailwindcss": "link:../node_modules/tailwindcss",
-    "sass-loader": "link:../node_modules/sass-loader"
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.4",
+    "sass": "link:../node_modules/sass",
+    "tailwindcss": "^2.1.4"
   },
   "eslintConfig": {
     "extends": "react-app"
