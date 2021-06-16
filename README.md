@@ -10,15 +10,29 @@
 
 ## Install
 
-npm users: `npm install --save @cross-ui/react && npm install tailwindcss@latest postcss@latest autoprefixer@latest -D`
+npm users: `npm install --save @cross-ui/react && npm install tailwindcss@latest postcss@latest autoprefixer@latest @craco/craco -D`
 
-yarn users: `yarn add @cross-ui/react && yarn add tailwindcss@latest postcss@latest autoprefixer@latest -D`
+yarn users: `yarn add @cross-ui/react && yarn add tailwindcss@latest postcss@latest autoprefixer@latest @craco/craco -D`
 
 ## Usage
 
+To overwrite the postcss.config.js of create-react-app, you need to use [`@craco/craco`](https://github.com/gsoft-inc/craco). You have the explanation here: https://blog.logrocket.com/tailwind-css-configure-create-react-app/
+
+your `package.json`
+```json
+...
+"scripts": {
+	"start": "craco start",
+	"build": "craco build",
+	"test": "craco test",
+	...
+}
+...
+```
+
 ```scss
-@import '~tailwindcss/dist/base.css';
-@import '~tailwindcss/dist/utilities.css';
+@import '~tailwindcss/base.css';
+@import '~tailwindcss/utilities.css';
 
 @import '~@cross-ui/core/dist/cross-ui/cross-ui.css';
 
