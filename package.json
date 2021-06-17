@@ -61,7 +61,7 @@
     "dist"
   ],
   "dependencies": {
-    "@cross-ui/core": "^0.0.1-alpha.2"
+    "@cross-ui/core": "^0.0.1-alpha.3"
   },
   "private": false
 }

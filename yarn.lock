@@ -1380,10 +1380,10 @@
   dependencies:
     chalk "^4.0.0"
 
-"@cross-ui/core@^0.0.1-alpha.2":
-  version "0.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/@cross-ui/core/-/core-0.0.1-alpha.2.tgz#5aa78f0efa221a51c6fd430501154fed08ea009a"
-  integrity sha512-KS8xtpRvUm7IvGk5jpLJbJhc7ZEARVcFrb1+V8YrRpsDyTalAoF8Mtx921OUYurQYEt1bMyHUGgY/MXTX2z3zA==
+"@cross-ui/core@^0.0.1-alpha.3":
+  version "0.0.1-alpha.4"
+  resolved "https://registry.yarnpkg.com/@cross-ui/core/-/core-0.0.1-alpha.4.tgz#4193435c2cdbafc822793dbf0207fa14569e5b01"
+  integrity sha512-Y6N8+XJXLVHW+P8EF5xorJ287+bhYm5BjGRu2nd/rHHzVbJLklgMAYuIdTpHeWfpZtvHNWRxjh7hm/HxZd1TnA==
   dependencies:
     "@stencil/core" "^2.6.0"
 
