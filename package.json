@@ -1,6 +1,6 @@
 {
   "name": "@cross-ui/react",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Wrapper of @cross-ui/core for React projects",
   "author": "dimaslz <me@dimaslz.io>",
   "license": "MIT",
