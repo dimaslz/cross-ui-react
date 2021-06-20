@@ -11,6 +11,20 @@ const App = () => {
     console.log("onClick")
   }
 
+  function onBlur() {
+    console.log("onBlur")
+  }
+
+  function onFocus() {
+    console.log("onFocus")
+  }
+
+  const commonProps = {
+    onClick,
+    onBlur,
+    onFocus
+  };
+
   return (<div className="flex flex-col">
     <div
       className="ForkMeOnGithub fixed top-0 right-0 mt-10 -mr-12 transform rotate-45 bg-gray-900 z-10"
@@ -32,30 +46,28 @@ const App = () => {
         Demo button using @cross-ui/react library based on @cross-ui/core
       </h1>
 
-      <div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} key={key} onClick={onClick}>{color}</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} key={key} outline onClick={onClick}>{color}</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} square={true} key={key} onClick={onClick}>?</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} square={true} key={key} outline onClick={onClick}>?</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} pill={true} key={key} onClick={onClick}>{color}</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} pill={true} key={key} outline onClick={onClick}>{color}</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} circle={true} key={key} onClick={onClick}>?</CuiButton>)}
-        </div>
-        <div>
-          {colors.map((color, key) => <CuiButton color={color} circle={true} key={key} outline onClick={onClick}>?</CuiButton>)}
+      <div className="Demos">
+        <div className="flex flex-col">
+          {colors.map((color, key) => (
+            <div className="mx-1" key={key}>
+              {[false, true].map((out, outKey) => (
+                ['default', 'pill', 'square', 'circle'].map(ui => {
+                  const props = {
+                    [ui]: true,
+                  };
+
+                  return <CuiButton
+                    className="m-1 w-32"
+                    key={`${key}.${outKey}.${color}.${out}.${ui}`}
+                    color={color}
+                    {...commonProps}
+                    outline={out}
+                    {...props}
+                  >{['circle', 'square'].includes(ui) ? '?' : color}</CuiButton>
+                })
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

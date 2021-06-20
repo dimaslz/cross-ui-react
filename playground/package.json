@@ -7,19 +7,31 @@
     "start": "craco start",
     "build": "NODE_ENV=production craco build",
     "test": "craco test",
+    "cypress:visual": "cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base,testFiles=\"**/*snapshot-demos.spec.js\"",
+    "cypress:visualdiff": "cypress run --env type=actual",
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@cross-ui/react": "link:..",
+    "e2e": "link:../node_modules/cypress",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@types/puppeteer": "^5.4.3",
     "autoprefixer": "^9",
+    "cypress": "^7.5.0",
+    "cypress-image-snapshot": "^4.0.1",
+    "cypress-visual-regression": "^1.5.7",
+    "jest": "^27.0.4",
+    "jest-puppeteer": "^5.0.4",
     "postcss": "^7",
+    "puppeteer": "^10.0.0",
     "sass": "link:../node_modules/sass",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
